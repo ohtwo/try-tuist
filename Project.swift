@@ -1,7 +1,7 @@
 import ProjectDescription
 
 let project = Project(
-    name: "MovieInfo-Tuist",
+    name: "MovieInfo",
     packages: [
         .remote(
             url: "https://github.com/davidskeck/FetchImage.git",

@@ -1,7 +1,7 @@
 import ProjectDescription
 
 let project = Project(
-    name: "NetworkKit-Tuist",
+    name: "NetworkKit",
     settings: .settings(configurations: [
         .debug(name: "Debug", xcconfig: "./xcconfigs/NetworkKit-Project.xcconfig"),
         .debug(name: "Release", xcconfig: "./xcconfigs/NetworkKit-Project.xcconfig"),

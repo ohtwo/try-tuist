@@ -14,10 +14,38 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "BF12C99CAF94134209C82C3E"
+               BlueprintIdentifier = "4E11709BAF1A6117F8DCD600"
                BuildableName = "MovieInfo.app"
                BlueprintName = "MovieInfo"
-               ReferencedContainer = "container:MovieInfo-Tuist.xcodeproj">
+               ReferencedContainer = "container:MovieInfo.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "71C200A0AB47BE0A56C57ABB"
+               BuildableName = "MovieInfoTests.xctest"
+               BlueprintName = "MovieInfoTests"
+               ReferencedContainer = "container:MovieInfo.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "DC93B437E5CFD867C043748F"
+               BuildableName = "NetworkKit.framework"
+               BlueprintName = "NetworkKit"
+               ReferencedContainer = "container:NetworkKit/NetworkKit.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -32,10 +60,10 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "8DA359C84A6905CB650D9235"
+               BlueprintIdentifier = "71C200A0AB47BE0A56C57ABB"
                BuildableName = "MovieInfoTests.xctest"
                BlueprintName = "MovieInfoTests"
-               ReferencedContainer = "container:MovieInfo-Tuist.xcodeproj">
+               ReferencedContainer = "container:MovieInfo.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -54,10 +82,10 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "BF12C99CAF94134209C82C3E"
+            BlueprintIdentifier = "4E11709BAF1A6117F8DCD600"
             BuildableName = "MovieInfo.app"
             BlueprintName = "MovieInfo"
-            ReferencedContainer = "container:MovieInfo-Tuist.xcodeproj">
+            ReferencedContainer = "container:MovieInfo.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </LaunchAction>
@@ -71,10 +99,10 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "BF12C99CAF94134209C82C3E"
+            BlueprintIdentifier = "4E11709BAF1A6117F8DCD600"
             BuildableName = "MovieInfo.app"
             BlueprintName = "MovieInfo"
-            ReferencedContainer = "container:MovieInfo-Tuist.xcodeproj">
+            ReferencedContainer = "container:MovieInfo.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>
