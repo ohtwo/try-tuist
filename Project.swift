@@ -1,7 +1,5 @@
 import ProjectDescription
 
-import ProjectDescription
-
 let project = Project(
     name: "MovieInfo-Tuist",
     settings: .settings(configurations: [
@@ -12,7 +10,7 @@ let project = Project(
         .target(
             name: "MovieInfo",
             destinations: .iOS,
-            product: .app, // [!code ++] // or .staticFramework, .staticLibrary...
+            product: .app,
             bundleId: "io.tuist.MovieInfo",
             infoPlist: "MovieInfo/Info.plist",
             sources: ["MovieInfo/Source/**"],
@@ -21,6 +19,10 @@ let project = Project(
                 /** Dependencies go here **/
                 /** .external(name: "Kingfisher") **/
                 /** .target(name: "OtherProjectTarget") **/
+                .project(
+                    target: "NetworkKit",
+                    path: .relativeToManifest("NetworkKit")
+                )
             ],
             settings: .settings(configurations: [
                 .debug(name: "Debug", xcconfig: "./xcconfigs/MovieInfo-Target.xcconfig"),

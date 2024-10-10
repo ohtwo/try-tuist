@@ -4,4 +4,7 @@
    <FileRef
       location = "group:MovieInfo-Tuist.xcodeproj">
    </FileRef>
+   <FileRef
+      location = "group:NetworkKit/NetworkKit-Tuist.xcodeproj">
+   </FileRef>
 </Workspace>
