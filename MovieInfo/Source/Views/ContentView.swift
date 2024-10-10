@@ -31,6 +31,7 @@
 /// THE SOFTWARE.
 
 import SwiftUI
+import FetchImage
 
 struct ContentView: View {
   @ObservedObject
@@ -39,7 +40,13 @@ struct ContentView: View {
   var body: some View {
     NavigationView {
       List(viewModel.movieList, id: \.id) { movie in
-        Text("\(movie.title)")
+          HStack {
+              if let url = movie.posterURL {
+                  ImageView(image: FetchImage(url: url))
+                      .frame(width: 92, height: 138)
+              }
+              Text("\(movie.title)")
+          }
       }
       .navigationTitle("Movie Info")
     }

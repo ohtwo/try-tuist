@@ -2,6 +2,12 @@ import ProjectDescription
 
 let project = Project(
     name: "MovieInfo-Tuist",
+    packages: [
+        .remote(
+            url: "https://github.com/davidskeck/FetchImage.git",
+            requirement: .upToNextMajor(from: "0.1.0")
+        )
+    ],
     settings: .settings(configurations: [
         .debug(name: "Debug", xcconfig: "./xcconfigs/MovieInfo-Project.xcconfig"),
         .debug(name: "Release", xcconfig: "./xcconfigs/MovieInfo-Project.xcconfig"),
@@ -22,7 +28,8 @@ let project = Project(
                 .project(
                     target: "NetworkKit",
                     path: .relativeToManifest("NetworkKit")
-                )
+                ),
+                .package(product: "FetchImage")
             ],
             settings: .settings(configurations: [
                 .debug(name: "Debug", xcconfig: "./xcconfigs/MovieInfo-Target.xcconfig"),

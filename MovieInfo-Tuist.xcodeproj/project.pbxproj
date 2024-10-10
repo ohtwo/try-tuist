@@ -3,13 +3,14 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 55;
+	objectVersion = 56;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		25D5BF8EE14BF7B9F257E106 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1E21EBA145785EA407D9A11F /* Assets.xcassets */; };
 		3AC91F7DCB514CD63841A67C /* TuistBundle+MovieInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = E149AA3B7EEFA975B353ACF5 /* TuistBundle+MovieInfo.swift */; };
 		48103034BE3419006C106408 /* NetworkKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E5D87DF78F7E4B54D28B22D2 /* NetworkKit.framework */; };
+		491C3DE72CB7C388006CCE2A /* ImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 491C3DE62CB7C388006CCE2A /* ImageView.swift */; };
 		563D88C704555E6A314F2810 /* AppMain.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6557B12D2D8542361CE9199 /* AppMain.swift */; };
 		59B0E16A49F611F7C594245B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A5689D726CC085C47F19C68C /* LaunchScreen.storyboard */; };
 		9D6EFB2444307B7C16B24DCF /* NetworkKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = E5D87DF78F7E4B54D28B22D2 /* NetworkKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -17,6 +18,7 @@
 		BABFB39E33751BBA34EABA2E /* MovieListViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67F499607B4C65331624FA87 /* MovieListViewModelTests.swift */; };
 		C4A6ADACC8C34EF153F413D5 /* MovieListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4272D94B4F9CEBBFA9421FC /* MovieListViewModel.swift */; };
 		EAD6959874320BCA571AE1B1 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D6758E150CA7A4553908523 /* ContentView.swift */; };
+		F14517FEB41C71F68984A2D6 /* FetchImage in Frameworks */ = {isa = PBXBuildFile; productRef = C8B494D0BDAF9B66724027E8 /* FetchImage */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +57,7 @@
 
 /* Begin PBXFileReference section */
 		1E21EBA145785EA407D9A11F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		491C3DE62CB7C388006CCE2A /* ImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageView.swift; sourceTree = "<group>"; };
 		6231B06DE1746CDD29BBB47D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		67F499607B4C65331624FA87 /* MovieListViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieListViewModelTests.swift; sourceTree = "<group>"; };
 		69433A07A42BA5D71098ACC0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
@@ -77,6 +80,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				48103034BE3419006C106408 /* NetworkKit.framework in Frameworks */,
+				F14517FEB41C71F68984A2D6 /* FetchImage in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -175,6 +179,7 @@
 		94F612345C9C55E53B5AA1D9 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				491C3DE62CB7C388006CCE2A /* ImageView.swift */,
 				9D6758E150CA7A4553908523 /* ContentView.swift */,
 			);
 			path = Views;
@@ -259,6 +264,9 @@
 			dependencies = (
 			);
 			name = MovieInfo;
+			packageProductDependencies = (
+				C8B494D0BDAF9B66724027E8 /* FetchImage */,
+			);
 			productName = MovieInfo;
 			productReference = 8EA9EA969F5DDEF73F2E6634 /* MovieInfo.app */;
 			productType = "com.apple.product-type.application";
@@ -285,6 +293,9 @@
 				en,
 			);
 			mainGroup = 36DF8B29B83F2673FC24F8F3;
+			packageReferences = (
+				8BE3150B9E5071C47058C3A5 /* XCRemoteSwiftPackageReference "FetchImage" */,
+			);
 			productRefGroup = 904AF7DC1FF1951ECBEF255A /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -319,6 +330,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				491C3DE72CB7C388006CCE2A /* ImageView.swift in Sources */,
 				A7747E16E8F67689820F2267 /* TuistAssets+MovieInfo.swift in Sources */,
 				3AC91F7DCB514CD63841A67C /* TuistBundle+MovieInfo.swift in Sources */,
 				563D88C704555E6A314F2810 /* AppMain.swift in Sources */,
@@ -376,10 +388,7 @@
 				SUPPORTS_MACCATALYST = NO;
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
 				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = (
-					"$(inherited)",
-					DEBUG,
-				);
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) DEBUG";
 				SWIFT_COMPILATION_MODE = singlefile;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
@@ -405,10 +414,7 @@
 				SUPPORTS_MACCATALYST = NO;
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
 				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = (
-					"$(inherited)",
-					DEBUG,
-				);
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) DEBUG";
 				SWIFT_COMPILATION_MODE = singlefile;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
@@ -553,10 +559,7 @@
 				SUPPORTS_MACCATALYST = NO;
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
 				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = (
-					"$(inherited)",
-					DEBUG,
-				);
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) DEBUG";
 				SWIFT_COMPILATION_MODE = singlefile;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
@@ -583,10 +586,7 @@
 				SUPPORTS_MACCATALYST = NO;
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
 				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = (
-					"$(inherited)",
-					DEBUG,
-				);
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) DEBUG";
 				SWIFT_COMPILATION_MODE = singlefile;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
@@ -627,6 +627,24 @@
 			defaultConfigurationName = Debug;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		8BE3150B9E5071C47058C3A5 /* XCRemoteSwiftPackageReference "FetchImage" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/davidskeck/FetchImage.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.1.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		C8B494D0BDAF9B66724027E8 /* FetchImage */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = FetchImage;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = C5839C5C1EE068A6336F81F1 /* Project object */;
 }
