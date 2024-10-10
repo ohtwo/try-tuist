@@ -29,5 +29,19 @@ let project = Project(
                 .debug(name: "Release", xcconfig: "./xcconfigs/MovieInfo-Target.xcconfig"),
             ])
         ),
+        .target(
+            name: "MovieInfoTests",
+            destinations: .iOS,
+            product: .unitTests,
+            bundleId: "io.tuist.MovieInfoTests",
+            infoPlist: "MovieInfoTests/Resources/Info.plist",
+            sources: ["MovieInfoTests/Source/**"],
+            dependencies: [
+                /** Dependencies go here **/
+                /** .external(name: "Kingfisher") **/
+                /** .target(name: "OtherProjectTarget") **/
+                .target(name: "MovieInfo")
+            ]
+        ),
     ]
 )
